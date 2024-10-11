@@ -16,7 +16,7 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }} # EC2 접속 username
           key: ${{ secrets.EC2_PRIVATE_KEY }} # EC2의 Key 파일의 내부 텍스트
           script: |
-            cd /home/springboot
+            cd /home/ubuntu/springboot
             git pull origin main
             ./gradlew clean build
             ./gradlew bootwar
